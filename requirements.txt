@@ -5,4 +5,4 @@ numpy
 tensorboard==2.4.1
 tensorflow
 matplotlib
-opencv
+opencv-python
