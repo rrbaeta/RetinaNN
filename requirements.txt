@@ -6,3 +6,4 @@ tensorboard==2.4.1
 tensorflow
 matplotlib
 opencv-python
+gunicorn==20.0.4
