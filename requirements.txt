@@ -2,8 +2,9 @@ Flask==1.1.2
 Werkzeug==1.0.1
 Pillow
 numpy
-tensorboard==2.4.1
+tensorboard
 tensorflow
 matplotlib
-opencv-python
-gunicorn==20.0.4
+wheel
+opencv-python==4.2.0.32
+gunicorn

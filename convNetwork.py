@@ -54,8 +54,8 @@ def learnModel(training_images, training_labels, test_images, test_labels):
     model.fit(training_images, training_labels, epochs=20, validation_data=(test_images, test_labels))
     
     loss, accuracy = model.evaluate(test_images, test_labels)
-    print(f"Loss: {loss}")
-    print(f"Accuracy: {accuracy}")
+    print("Loss: {}".format(loss))
+    print("Accuracy: {}".format(accuracy))
     model.summary()
     
     model.save('retina_disease_classifier.model')
@@ -76,5 +76,5 @@ def predictionModel(single_image):
     img = np.array([img]).reshape(-1, 280, 400, 1) / 255
     prediction = model.predict(img)
     index = np.argmax(prediction)
-    print(f"Prediction is {class_names[index]}")
+    print("Prediction is {}".format(class_names[index]))
     return class_names[index]
