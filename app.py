@@ -13,7 +13,7 @@ ALLOWED_EXTENSIONS = {'jpg', 'jpeg'}
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+    return "<h1>Retinal Desieses Neural Net</h1><p>Detect and prevent retinal desieses with a smart neural network</p>"
 
 # A route to return all of the available entries in our catalog.
 @app.route('/api/v1/analyze/exGet', methods=['GET'])
