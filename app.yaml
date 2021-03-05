@@ -1,14 +1,15 @@
-runtime: python
+entrypoint: "gunicorn -b :$PORT app:app"
 env: flex
-entrypoint: gunicorn -b :$PORT app:app
 
-runtime_config:
-  python_version: 2.7
-
-manual_scaling:
+manual_scaling: 
   instances: 1
 
-resources:
+resources: 
   cpu: 1
-  memory_gb: 0.5
   disk_size_gb: 10
+  memory_gb: 0.5
+
+runtime: python
+
+runtime_config: 
+  python_version: 2

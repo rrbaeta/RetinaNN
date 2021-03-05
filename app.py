@@ -13,7 +13,7 @@ ALLOWED_EXTENSIONS = {'jpg', 'jpeg'}
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>Retinal Desieses Neural Net</h1><p>Detect and prevent retinal desieses with a smart neural network</p>"
+    return "<h1>Retinal Diseases Neural Net</h1><p>Detect and prevent retinal diseases with a smart neural network</p>"
 
 # A route to return all of the available entries in our catalog.
 @app.route('/api/v1/analyze/exGet', methods=['GET'])
