@@ -29,6 +29,8 @@ from tensorflow.keras import datasets, layers, models
 
 #plt.show()
 
+print(tf.__version__)
+
 def main(training_images, training_labels, test_images, test_labels):
 
     learnModel(training_images, training_labels, test_images, test_labels)
@@ -49,20 +51,23 @@ def learnModel(training_images, training_labels, test_images, test_labels):
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dense(3, activation='softmax')) #Last layer
     
+    print("1")
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     
-    model.fit(training_images, training_labels, epochs=20, validation_data=(test_images, test_labels))
+    print("2")
+    model.fit(training_images, training_labels, epochs=2, validation_data=(test_images, test_labels))
     
+    print("3")
     loss, accuracy = model.evaluate(test_images, test_labels)
     print("Loss: {}".format(loss))
     print("Accuracy: {}".format(accuracy))
     model.summary()
     
-    model.save('retina_disease_classifier.model')
+    #model.save('retina_disease_classifier.model')
 
 
 def predictionModel(single_image):
-    model = models.load_model('retina_disease_classifier.model') #This loads an already trained model
+    model = models.load_model("./retina_disease_classifier.model") #This loads an already trained model
 
     class_names = ['Healthy', 'Glaucomatous', 'Diabetic Retinopathy']
 

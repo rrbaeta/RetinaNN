@@ -11,7 +11,7 @@ imageDatasetOriginalPath2 = "./TestDatasetOriginal/Healthy/"
 imageDatasetOriginalPath3 = "./TestDatasetOriginal/DR2/"
 imageDatasetOriginalPath = imageDatasetOriginalPath1
 imageDatasetPath = "./Dataset/"
-UPLOAD_FOLDER = "./uploads/"
+UPLOAD_FOLDER = "./tmp/"
 
 imageLength = 400
 j = 0

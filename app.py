@@ -7,9 +7,10 @@ import convNetwork
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-UPLOAD_FOLDER = "./uploads"
+UPLOAD_FOLDER = "./tmp"
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg'}
 
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/', methods=['GET'])
 def home():
@@ -34,9 +35,9 @@ def analyzeRetina():
         return '', 400
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        file.save(os.path.join(UPLOAD_FOLDER, filename))
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         imageEnhancement.convertSingleImage(filename)
-        prediction = convNetwork.predictImage("./uploads/" + filename)
+        prediction = convNetwork.predictImage("./tmp/" + filename)
         return jsonify({'status': 'success', 'prediction': prediction}), 200
     return '''
     <!doctype html>
@@ -63,8 +64,13 @@ def internal_server_error(e):
     result = {'httpStatus': '500', 'name':e.name, 'description': e.description}
     return jsonify(result), 500
 
+@app.errorhandler(Exception)
+def defaultHandler(e):
+    result = {'httpStatus': '500', 'name':e.name, 'description': e.description}
+    return jsonify(result), 500
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-app.run(port=8080)
+app.run(host='192.168.0.40', port=8080)

@@ -1,0 +1,51 @@
+absl-py @ file:///home/conda/feedstock_root/build_artifacts/absl-py_1606236319513/work
+astunparse @ file:///home/conda/feedstock_root/build_artifacts/astunparse_1610696312422/work
+cached-property @ file:///tmp/build/80754af9/cached-property_1600785575025/work
+cachetools==4.2.1
+certifi==2020.6.20
+chardet==4.0.0
+click==7.1.2
+cycler==0.10.0
+Flask==1.1.2
+flatbuffers==1.12
+gast @ file:///home/conda/feedstock_root/build_artifacts/gast_1596839682936/work
+google-auth==1.26.0
+google-auth-oauthlib==0.4.2
+google-pasta==0.2.0
+grpcio @ file:///Users/rodrigobaeta/Downloads/tensorflow_macos/arm64/grpcio-1.33.2-cp38-cp38-macosx_11_0_arm64.whl
+h5py @ file:///Users/rodrigobaeta/Downloads/tensorflow_macos/arm64/h5py-2.10.0-cp38-cp38-macosx_11_0_arm64.whl
+idna==2.10
+itsdangerous==1.1.0
+Jinja2==2.11.2
+Keras-Preprocessing==1.1.2
+kiwisolver @ file:///Users/runner/miniforge3/conda-bld/kiwisolver_1610099944045/work
+Markdown==3.3.3
+MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1610127508374/work
+matplotlib @ file:///Users/runner/miniforge3/conda-bld/matplotlib-suite_1611858797643/work
+numpy @ file:///Users/runner/miniforge3/conda-bld/numpy_1612953020292/work
+oauthlib==3.1.0
+olefile==0.46
+opt-einsum==0+untagged.61.gd905544.dirty
+Pillow @ file:///Users/runner/miniforge3/conda-bld/pillow_1612816732289/work
+protobuf==3.14.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pyparsing==2.4.7
+python-dateutil==2.8.1
+python-json-logger @ file:///home/conda/feedstock_root/build_artifacts/python-json-logger_1602545356084/work
+requests==2.25.1
+requests-oauthlib==1.3.0
+rsa==4.7
+six @ file:///home/linux1/recipes/ci/six_1610970791821/work
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+tensorflow-addons-macos @ file:///Users/rodrigobaeta/Downloads/tensorflow_macos/arm64/tensorflow_addons_macos-0.1a2-cp38-cp38-macosx_11_0_arm64.whl
+tensorflow-estimator==2.4.0
+tensorflow-macos @ file:///Users/rodrigobaeta/Downloads/tensorflow_macos/arm64/tensorflow_macos-0.1a2-cp38-cp38-macosx_11_0_arm64.whl
+termcolor==1.1.0
+tornado @ file:///Users/runner/miniforge3/conda-bld/tornado_1610094713927/work
+typeguard @ file:///home/conda/feedstock_root/build_artifacts/typeguard_1591536393833/work
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1602702424206/work
+urllib3==1.26.3
+Werkzeug==1.0.1
+wrapt==1.12.1
